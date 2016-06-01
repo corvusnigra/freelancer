@@ -1,0 +1,15 @@
+{
+  "name": "gulp-susy-starter",
+  "version": "0.0.0",
+  "license": "MIT",
+  "dependencies": {
+    "breakpoint-sass": "~2.5.0",
+    "susy": "~2.2.2",
+    "scrollmagic": "~2.0.5",
+    "gsap": "~1.18.2",
+    "font-awesome": "fontawesome#^4.5.0"
+  },
+  "devDependencies": {
+    "breakpoint-sass": "~2.5.0"
+  }
+}
