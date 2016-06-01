@@ -34,17 +34,16 @@
   	var headerCarousel = $('.header-carousel');
   	if (headerCarousel.length) {
   		headerCarousel.owlCarousel({
+  			loop: true,
   			nav: true,
   			items: 1,
   			dots: true,
   			autoWidth: true,
   			navText: [
-  			'<i class="fa fa-angle-left"></i>',
-  			'<i class="fa fa-angle-right"></i>'
-  			],
-  			autoplay:true,
-  			autoplayTimeout:3000,
-  			autoplayHoverPause:true,
+  			'<i class="fa fa-long-arrow-left"></i>',
+  			'<i class="fa fa-long-arrow-right"></i>'
+  			]
+  		
   		});
   	}
   }
