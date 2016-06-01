@@ -36,7 +36,12 @@ gulp.task('scripts', function() {
 		'./app/libs/animate/animate-css.js',
 		'./app/libs/gsap/src/uncompressed/TweenMax.js',
 		'./app/libs/scrollmagic/scrollmagic/uncompressed/ScrollMagic.js',
-		'./app/libs/scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js'
+		'./app/libs/scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js',
+		'./app/libs/owl.carousel/dist/owl.carousel.min.js',
+		'./app/libs/jQuery.equalHeights/jquery.equalheights.min.js',
+		'./app/libs/magnific-popup/dist/jquery.magnific-popup.min.js',
+		'./app/libs/superfish/dist/js/superfish.min.js',
+		'./app/libs/page-scroll-to-id/jquery.malihu.PageScroll2id.js'
 		])
 		.pipe(concat('libs.js'))
 		// .pipe(uglify()) //Minify libs.js
