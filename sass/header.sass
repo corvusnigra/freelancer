@@ -11,13 +11,15 @@ body
 	min-width: 320px
 	position: relative
 	line-height: 1.6
-	font-family: "RobotoRegular", sans-serif
+	font-family: "LatoLight", sans-serif
 	overflow-x: hidden
 	color: #fff
 
 .hidden
 	display: none
-
+h1
+	font-weight: normal
+	font-family: "LatoLight", sans-serif
 header
 	min-height: 600px
 	background-size: cover
@@ -71,6 +73,7 @@ header
 	border: 1px solid #fff
 	border-radius: 20px
 	text-align: center
+	top: 50%
 	transition: .3s
 	&:hover
 		background: #fff
@@ -82,9 +85,11 @@ header
 .owl-next
 	right: 4%
 .header-carousel__content
-	border: 1px solid #000
-	width: 36%
+	width: 38%
 	margin: 0 auto
+	margin-top: 10%
+	p
+		margin-bottom: 50px
 
 .button
 	display: inline-block
@@ -97,6 +102,7 @@ header
 	border-radius: 28px
 	transition: .3s
 	margin-right: 20px
+	white-space: nowrap
 	.fa
 		margin-left: 20px
 	&:hover
@@ -108,4 +114,38 @@ header
 		text-decoration: none
 	&:visited
 		color: #fff
+
+.sf-menu
+	width: 100%
+	text-align: center
+	margin-bottom: 0 !important
+	background: rgba(0,0,0, 0.7)
+	padding: 10px 0 !important
+	&>li
+		float: none !important
+		display: inline-block
+		background: none !important
+		position: relative
+		margin: 0 1em
+		&::before
+			content: ""
+			position: absolute
+			height: 2px
+			width: 100%
+			background: #f3924d
+			left: 0px
+			bottom: -7px
+			opacity: 0
+			transition: .3s
+		&:hover
+			&::before
+				bottom: 2px
+				opacity: 1
+		a
+			text-transform: uppercase
+			color: #fff
+			border: none
+			padding: .75em 0
+nav
+	margin-top: 10%
 
