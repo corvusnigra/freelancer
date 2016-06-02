@@ -56,6 +56,7 @@ header
 
 .header-soc
 	margin-top: 60px
+	display: inline-block
 	ul
 		margin: 0
 		padding: 0
@@ -66,6 +67,7 @@ header
 				color: #fff
 .header-tel
 	margin-top: 60px
+	display: inline-block
 .owl-prev,.owl-next
 	position: absolute
 	width: 50px
@@ -90,6 +92,23 @@ header
 	margin-top: 10%
 	p
 		margin-bottom: 50px
+		transform: translateY(200%)
+		opacity: 0
+		transition: 1s
+	.header-h1
+		transform: translateY(100%)
+		opacity: 0
+		transition: 1.5s
+
+.owl-item.active
+	.header-h1
+		transform: translateY(0)
+		opacity: 1
+	p
+		transform: translateY(0)
+		opacity: 1
+		transition-delay: .3s
+
 
 .button
 	display: inline-block
@@ -147,5 +166,27 @@ header
 			border: none
 			padding: .75em 0
 nav
-	margin-top: 10%
+	margin-top: 7%
+
+.owl-dot
+	display: inline-block
+	width: 13px
+	height: 13px
+	border: 1px solid #fff
+	border-radius: 50%
+	margin: 0 5px
+	transition: .3s
+	&.active
+		background: #fff
+.owl-dots
+	text-align: center
+	margin-top: 5%
+
+.logo
+	display: inline-block
+	width: 220px
+	margin-top: 40px
+
+.text-center
+	text-align: center
 
