@@ -190,6 +190,49 @@ body textarea:required:valid
     width: 100%
 //	Owl Carousel - Video Plugin
 
+//Toggle Menu http://codepen.io/agragregra/pen/bEbbmZ
+.toggle-mnu 
+  width: 28px
+  height: 28px
+  margin-top: 14px
+  position: fixed
+  right: 15px
+  top: 0
+  z-index: 100
+
+  span:after, span:before 
+    content: ""
+    position: absolute
+    left: 0
+    top: 9px
+
+  span:after
+    top: 18px
+
+  span 
+    position: relative
+    display: block
+
+  span, span:after, span:before
+    width: 100%
+    height: 2px
+    background-color: #fff
+    transition: all 0.3s
+    backface-visibility: hidden
+    border-radius: 2px
+    &.bg-dark
+      background: #000
+
+  &.on span 
+    background-color: transparent
+
+  &.on span:before 
+    transform: rotate(45deg) translate(-1px, 0px)
+
+  &.on span:after 
+    transform: rotate(-45deg) translate(6px, -7px)
+
+
 
 //Custom Styles Here
 .about-descr
@@ -287,6 +330,52 @@ nav
 		opacity: 0
 	to
 		opacity: 1
+
+#mobile-menu
+  z-index: 101
+
+.skills
+  background-size: cover
+  background-position: top center
+  position: relative
+  color: #fff
+  h1
+    color: #fff
+  &::before
+    content: ""
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: #081528
+    opacity: 0.9
+
+.position-r
+  position: relative
+  z-index: 50
+.skills-menu
+  list-style-type: none
+  margin: 0
+  padding: 0
+  border-right: 2px solid rgba(255,255,255, 0.2)
+  li
+    margin: 30px 0
+    vertical-align: middle
+    transition: .3s
+    &:hover
+      border-right: 2px solid #f3924d
+      .wrap-icon
+        background: #f3924d
+        color: #fff
+        border: 1px solid #f3924d
+  .wrap-icon
+    width: 59px
+    height: 59px
+    padding: 15px
+    .fa
+      font-size: 26px
+    
 
 
 

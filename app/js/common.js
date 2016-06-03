@@ -72,6 +72,7 @@
   }).setClassToggle("nav", "pined") 
   .addTo(controller);
 
+
   $(".about-item,.services-item").each( function(index){
 		$(this).css('animation-delay', index/10 +'s');
 	});
@@ -79,12 +80,32 @@
   $(".about-item").animated("fadeInRight");
   $(".services-item").animated("fadeInLeft");
 
+  function  mobileMenu() {
+
+    $('#mobile-menu').mmenu({
+      extensions : [  'theme-white', 'effect-menu-slide', 'pagedim-black' ],
+      navbar: {
+        title: "Меню"
+      }
+    });
+
+    $(".toggle-mnu").click(function() {
+      $(this).addClass("on");
+    });
+
+  var api = $("#mobile-menu").data("mmenu");
+  api.bind("closed", function () {
+    $(".toggle-mnu").removeClass("on");
+  });
+
+};
+
 
 	// doc ready
 	$(document).on('ready', function () {
 		headerCarousel();
 		pageScroll();
-		 $(".mmenu").mmenu();
+    mobileMenu();
 
 	});
 	// window load
@@ -98,3 +119,4 @@
 	});
 
 })(jQuery);
+
