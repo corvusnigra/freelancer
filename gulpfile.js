@@ -41,7 +41,9 @@ gulp.task('scripts', function() {
 		'./app/libs/jQuery.equalHeights/jquery.equalheights.min.js',
 		'./app/libs/magnific-popup/dist/jquery.magnific-popup.min.js',
 		'./app/libs/superfish/dist/js/superfish.min.js',
-		'./app/libs/page-scroll-to-id/jquery.malihu.PageScroll2id.js'
+		'./app/libs/page-scroll-to-id/jquery.malihu.PageScroll2id.js',
+		'./app/libs/jQuery.mmenu/dist/js/jquery.mmenu.all.min.js'
+
 		])
 		.pipe(concat('libs.js'))
 		// .pipe(uglify()) //Minify libs.js

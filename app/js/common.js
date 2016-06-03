@@ -47,13 +47,50 @@
   		});
   	}
   }
+
+  // mPageScroll2id
+
+  function pageScroll() {
+  	$("a[href*='#']").mPageScroll2id({
+  		highlightClass:"active"
+  	});
+  }
+
+  function equalHeights() {
+  	$('.services-item__description').equalHeights();
+  }
+  
+
+  /* PIN NAV */
+
+  var controller = new ScrollMagic.Controller();
+
+  var imgscene = new ScrollMagic.Scene({
+  	triggerElement: "#about",
+  	triggerHook: "onLeave",
+    offset: "10%",
+  }).setClassToggle("nav", "pined") 
+  .addTo(controller);
+
+  $(".about-item,.services-item").each( function(index){
+		$(this).css('animation-delay', index/10 +'s');
+	});
+
+  $(".about-item").animated("fadeInRight");
+  $(".services-item").animated("fadeInLeft");
+
+
 	// doc ready
 	$(document).on('ready', function () {
 		headerCarousel();
+		pageScroll();
+		 $(".mmenu").mmenu();
+
 	});
 	// window load
 	$(window).on('load', function () {
 		handlePreloader();
+		equalHeights();
 	});
 	// window scroll
 	$(window).on('scroll', function () {

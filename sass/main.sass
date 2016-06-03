@@ -9,6 +9,8 @@
 @import "susy"
 @import "app/libs/magnific-popup/dist/magnific-popup"
 @import "app/libs/superfish/dist/css/superfish"
+@import "app/libs/jQuery.mmenu/dist/css/jquery.mmenu"
+
 
 
 
@@ -190,6 +192,103 @@ body textarea:required:valid
 
 
 //Custom Styles Here
+.about-descr
+	padding-left: 80px
+	padding-top: 10px
+
+.about-btn
+	padding-left: 80px
+	padding-top: 30px
+	.button
+		border-color: #cccccc
+		color: #282d4a
+	& .button:hover
+		background: #454851
+		color: #fff !important
+
+.about-item
+	ul
+		margin: 0
+		padding: 0
+		list-style-type: none
+		li
+			display: inline-block
+			position: relative
+			&:nth-child(1)
+				vertical-align: top
+				width: 30%
+				.fa
+					font-size: 37px
+					color: #454851
+					padding: 30px 0px 0 50px
+			&:nth-child(2)
+				width: 67%
+
+				&::before
+					content: ""
+					position: absolute
+					height: 2px
+					width: 30px
+					bottom: 0
+					background: #f78f46
+
+
+.services
+	background: url(../img/squairy_light.png) repeat
+
+.section-h1__center
+	text-align: center
+	&::before
+		left: 50%
+		margin-left: -40px
+
+.section-p
+		text-align: center
+		padding: 20px 0
+
+.services-item
+	padding-top: 60px
+	ul
+		list-style-type: none
+		margin: 0
+		padding: 0
+
+.services-item__icon
+	height: 73px
+	img
+		width: 60px
+		height: auto
+.services-item__title
+	h3
+		margin: 13px 0 39px 0
+		position: relative
+		&::before
+			content: ""
+			position: absolute
+			height: 2px
+			width: 30px
+			bottom:  -20px
+			background: #f78f46
+
+nav
+	transition: position .3s
+
+
+.pined
+	position: fixed
+	top: 0
+	width: 100%
+	margin-top: 0
+	z-index: 100
+	animation: pinanim .7s
+
+@keyframes pinanim
+	from
+		opacity: 0
+	to
+		opacity: 1
+
+
 
 
 //ALWAYS END

@@ -7,19 +7,38 @@
 
 
 body
-	font-size: 16px
+	font-size: 18px
 	min-width: 320px
 	position: relative
 	line-height: 1.6
 	font-family: "LatoLight", sans-serif
 	overflow-x: hidden
-	color: #fff
+	color: #020202
 
 .hidden
 	display: none
 h1
 	font-weight: normal
 	font-family: "LatoLight", sans-serif
+	color: #020202
+
+h2
+	text-transform: uppercase
+	color: #2c2944
+	font-size: 24px
+.section-h1
+	position: relative
+	&::before
+		content: ""
+		position: absolute
+		width: 80px
+		bottom: -20px
+		height: 2px
+		background: #f78f46
+
+section
+	padding: 5% 0px
+
 header
 	min-height: 600px
 	background-size: cover
@@ -68,6 +87,7 @@ header
 .header-tel
 	margin-top: 60px
 	display: inline-block
+	color: #fff
 .owl-prev,.owl-next
 	position: absolute
 	width: 50px
@@ -75,6 +95,7 @@ header
 	border: 1px solid #fff
 	border-radius: 20px
 	text-align: center
+	color: #fff
 	top: 50%
 	transition: .3s
 	&:hover
@@ -95,10 +116,14 @@ header
 		transform: translateY(200%)
 		opacity: 0
 		transition: 1s
+		color: #fff
 	.header-h1
 		transform: translateY(100%)
 		opacity: 0
 		transition: 1.5s
+		color: #fff
+	.button
+		margin-top: 10px
 
 .owl-item.active
 	.header-h1
@@ -146,27 +171,35 @@ header
 		background: none !important
 		position: relative
 		margin: 0 1em
-		&::before
-			content: ""
-			position: absolute
-			height: 2px
-			width: 100%
-			background: #f3924d
-			left: 0px
-			bottom: -7px
-			opacity: 0
-			transition: .3s
-		&:hover
-			&::before
-				bottom: 2px
-				opacity: 1
+		
 		a
 			text-transform: uppercase
 			color: #fff
 			border: none
 			padding: .75em 0
+			position: relative
+			&.active
+				&::before
+					bottom: 2px
+					opacity: 1
+			&::before
+				content: ""
+				position: absolute
+				height: 2px
+				width: 100%
+				background: #f3924d
+				left: 0px
+				bottom: -7px
+				opacity: 0
+				transition: .3s
+			&:hover
+				&::before
+					bottom: 2px
+					opacity: 1
 nav
-	margin-top: 7%
+	// margin-top: 7%
+.header-carousel 
+	margin-bottom: 7%
 
 .owl-dot
 	display: inline-block

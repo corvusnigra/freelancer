@@ -43,7 +43,7 @@
 
 <body>
 
-	<header style="background-image: url(img/bg_slide1.jpg)">
+	<header id="home" style="background-image: url(img/bg_slide1.jpg)">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-7">
@@ -126,9 +126,9 @@
 
 		<nav class="clearfix">
 			<ul class="sf-menu">
-				<li><a href="#">Home</a></li>
-				<li><a href="#">About me</a></li>
-				<li><a href="#">Services</a></li>
+				<li><a href="#home">Home</a></li>
+				<li><a href="#about">About me</a></li>
+				<li><a href="#services">Services</a></li>
 				<li><a href="#">My skills</a></li>
 				<li><a href="#">Portfolio</a></li>
 				<li><a href="#">Work process</a></li>
@@ -137,7 +137,180 @@
 				<li><a href="#">Contact me</a></li>
 			</ul>
 		</nav>
+		<ul class="mmenu">
+				<li><a href="#home">Home</a></li>
+				<li><a href="#about">About me</a></li>
+				<li><a href="#services">Services</a></li>
+				<li><a href="#">My skills</a></li>
+				<li><a href="#">Portfolio</a></li>
+				<li><a href="#">Work process</a></li>
+				<li><a href="#">Testimonials</a></li>
+				<li><a href="#">Blog</a></li>
+				<li><a href="#">Contact me</a></li>
+			</ul>
 	</header>
+
+	<section id="about" class="about">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-7">
+					<h1 class="section-h1">Something About Me</h1>
+					<div class="about-descr">
+						<h2>Freelance frontend developer and expert website designer</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat voluptatem aperiam labore sed debitis, consequuntur neque, possimus quo deleniti similique fugit, consequatur? Ipsa ratione voluptatibus sed quasi laboriosam tenetur ad, officia enim hic ipsam quae culpa ipsum nesciunt temporibus, dolore numquam quas veniam odio quidem beatae dolorum eveniet. Possimus, non. </p>
+					</div>
+					<div class="about-btn">
+						<a href="#" class="button">Download resume<i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+					</div>
+				</div>
+				<div class="col-md-5">
+					<div class="about-item">
+						<ul>
+							<li><i class="fa fa-hand-o-right" aria-hidden="true"></i></li>
+							<li>
+								<h3>I am recognized expert</h3>
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, porro.
+								</p>
+							</li>
+						</ul>
+					</div>
+
+					<div class="about-item">
+						<ul>
+							<li><i class="fa fa-graduation-cap" aria-hidden="true"></i></li>
+							<li>
+								<h3>I am multi-faceted</h3>
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, porro.
+								</p>
+							</li>
+						</ul>
+					</div>
+
+					<div class="about-item">
+						<ul>
+							<li><i class="fa fa-user" aria-hidden="true"></i></li>
+							<li>
+								<h3>Your long-term partner</h3>
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, porro.
+								</p>
+							</li>
+						</ul>
+					</div>
+
+				</div>
+			</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="services" class="services">
+		<div class="container">
+			<div class="row">
+				<h1 class="section-h1 section-h1__center">Take a look at my services</h1>
+				<p class="section-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores vitae velit unde alias nisi. Tenetur vel odio perspiciatis quia, saepe quibusdam id, quasi iusto sit, repellendus dicta expedita delectus voluptatum exercitationem. Inventore corporis, voluptatum unde iusto esse odio quia atque, illum facere repellat, laboriosam dolorum. Nisi ipsam libero assumenda a, numquam voluptatibus iusto. Deserunt ullam vel iste vitae incidunt fuga. 
+				</p>
+				<div class="col-md-4 col-sm-6">
+					<div class="services-item">
+						<ul>
+							<li class="services-item__icon">
+								<img src="img/icon_joomla.png" alt="">
+							</li>
+							<li class="services-item__title">
+								<h3>Joomla Development</h3>
+							</li>
+							<li class="services-item__description">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio odit qui quaerat enim dolorem debitis ea dolor ducimus ipsum officia! </p>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="col-md-4 col-sm-6">
+					<div class="services-item">
+						<ul>
+							<li class="services-item__icon">
+								<img src="img/icon_magendo.png" alt="">
+							</li>
+							<li class="services-item__title">
+								<h3>Magendo Development</h3>
+							</li>
+							<li class="services-item__description">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio odit qui quaerat enim dolorem debitis ea dolor ducimus ipsum officia! </p>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="col-md-4 col-sm-6">
+					<div class="services-item">
+						<ul>
+							<li class="services-item__icon">
+								<img src="img/icon_php.png" alt="">
+							</li>
+							<li class="services-item__title">
+								<h3>PHP Development</h3>
+							</li>
+							<li class="services-item__description">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio odit qui quaerat enim dolorem debitis ea dolor ducimus ipsum officia! </p>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="col-md-4 col-sm-6">
+					<div class="services-item">
+						<ul>
+							<li class="services-item__icon">
+								<img src="img/icon_code.png" alt="">
+							</li>
+							<li class="services-item__title">
+								<h3>PSD to HTML</h3>
+							</li>
+							<li class="services-item__description">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio odit qui quaerat enim dolorem debitis ea dolor ducimus ipsum officia! </p>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="col-md-4 col-sm-6">
+					<div class="services-item">
+						<ul>
+							<li class="services-item__icon">
+								<img src="img/icon_comp.png" alt="">
+							</li>
+							<li class="services-item__title">
+								<h3>Responsive Web Design</h3>
+							</li>
+							<li class="services-item__description">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio odit qui quaerat enim dolorem debitis ea dolor ducimus ipsum officia! </p>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="col-md-4 col-sm-6">
+					<div class="services-item">
+						<ul>
+							<li class="services-item__icon">
+								<img src="img/icon_ps.png" alt="">
+							</li>
+							<li class="services-item__title">
+								<h3>Website Design</h3>
+							</li>
+							<li class="services-item__description">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio odit qui quaerat enim dolorem debitis ea dolor ducimus ipsum officia! </p>
+							</li>
+						</ul>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</section>
 	
 
 
