@@ -72,6 +72,15 @@
   }).setClassToggle("nav", "pined") 
   .addTo(controller);
 
+  var imgscene2 = new ScrollMagic.Scene({
+    triggerElement: "#skills",
+    triggerHook: "onLeave",
+    offset: "10%",
+  }).setClassToggle(".skills-container__item", "up-height") 
+  .addTo(controller);
+
+
+
 
   $(".about-item,.services-item").each( function(index){
 		$(this).css('animation-delay', index/10 +'s');
@@ -100,12 +109,28 @@
 
 };
 
+function featureListTab () {
+    var tabContent = $('.tab-row');
+    if (tabContent.length) {
+      tabContent.find('.tab-content-box').hide();
+      tabContent.find('.tab-content-box').eq(0).show();
+      tabContent.find('.tab-title li').on('click', function () {
+        tabContent.find('.tab-title li').removeClass('active');
+        $(this).addClass('active');
+        var tabName = $(this).data('tab-name');
+        tabContent.find('.tab-content-box').hide();
+        tabContent.find('.tab-content-box.'+ tabName).fadeIn(500);
+      });
+    };
+  }
+
 
 	// doc ready
 	$(document).on('ready', function () {
 		headerCarousel();
 		pageScroll();
     mobileMenu();
+    featureListTab();
 
 	});
 	// window load
