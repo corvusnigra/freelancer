@@ -119,7 +119,8 @@ function featureListTab () {
         $(this).addClass('active');
         var tabName = $(this).data('tab-name');
         tabContent.find('.tab-content-box').hide();
-        tabContent.find('.tab-content-box.'+ tabName).fadeIn(500);
+        tabContent.find('.tab-content-box').removeClass('active');
+        tabContent.find('.tab-content-box.'+ tabName).fadeIn(500).addClass('active');
       });
     };
   }
