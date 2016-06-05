@@ -42,7 +42,8 @@ gulp.task('scripts', function() {
 		'./app/libs/magnific-popup/dist/jquery.magnific-popup.min.js',
 		'./app/libs/superfish/dist/js/superfish.min.js',
 		'./app/libs/page-scroll-to-id/jquery.malihu.PageScroll2id.js',
-		'./app/libs/jQuery.mmenu/dist/js/jquery.mmenu.all.min.js'
+		'./app/libs/jQuery.mmenu/dist/js/jquery.mmenu.all.min.js',
+		'./app/libs/mixitup/build/jquery.mixitup.min.js'
 
 		])
 		.pipe(concat('libs.js'))

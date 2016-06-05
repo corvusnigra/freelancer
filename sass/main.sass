@@ -486,6 +486,49 @@ nav
 .line-4
   top: 70%
 
+.project-menu
+  list-style-type: none
+  margin: 0
+  padding: 0
+  text-align: center
+  background-image: url(../img/squairy_light.png)
+  li
+    display: inline-block
+    margin: 0 10px
+    padding: 20px 0
+    position: relative
+    cursor: pointer
+    &:hover,&.active
+      &::before
+        opacity: 1
+        bottom: 10px
+    &::before
+      content: ""
+      position: absolute
+      bottom: -5px
+      left: 0
+      height: 2px
+      width: 100%
+      opacity: 0
+      transition: .3s
+      background: #f18d42
+
+.tab-content-wrap
+  a
+    &:visited,&:focus
+      outline: none
+  .project-item
+    padding: 0
+    height: 200px
+.project-img
+  height: 100%
+  width: 100%
+  background-size: cover !important
+.mix
+  display: none
+
+
+
 
     
 

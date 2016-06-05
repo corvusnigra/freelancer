@@ -125,6 +125,25 @@ function featureListTab () {
     };
   }
 
+  // upcoming event filter 
+  function upcomingEventFilter () {
+    var upcomingEventFilterContent = $('#projects .tab-content-wrap');
+    if (upcomingEventFilterContent) {
+      upcomingEventFilterContent.mixItUp();
+    };
+  }
+
+  function popupProject() {
+    $('.project-popup').magnificPopup({
+      type: 'image',
+      closeOnContentClick: true,
+      mainClass: 'mfp-img-mobile',
+      image: {
+        verticalFit: true
+      }
+
+    });
+  }
 
 	// doc ready
 	$(document).on('ready', function () {
@@ -132,12 +151,14 @@ function featureListTab () {
 		pageScroll();
     mobileMenu();
     featureListTab();
-
+    upcomingEventFilter();
+    popupProject()
 	});
 	// window load
 	$(window).on('load', function () {
 		handlePreloader();
 		equalHeights();
+
 	});
 	// window scroll
 	$(window).on('scroll', function () {
