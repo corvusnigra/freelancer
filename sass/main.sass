@@ -556,6 +556,85 @@ nav
     background-image: url(../img/icon_arrow_right.png) !important
     left: 0px
 
+.started
+  position: relative
+  color: #fff
+  background-attachment: fixed !important
+  background-size: cover !important
+  &::before
+    position: absolute
+    content: ""
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: #f78f46
+    opacity: .9
+
+  .section-h1
+    color: #fff
+  .button
+    margin: 80px 0
+
+.team
+  background: url(../img/squairy_light.png) repeat
+.team-item
+  background: #fff
+  margin-bottom: 30px
+  &>ul
+    float: right
+    width: 50%
+    +breakpoint(max-width 430px)
+      width: 100%
+      text-align: center
+    li
+      padding: 5px 0 5px 20px
+  ul
+    list-style-type: none
+    margin: 0
+    padding: 0
+.team-item__social
+  font-size: 15px
+
+  ul>li
+    display: inline-block
+    padding: 0
+    padding-top: 13px
+    a
+      display: inline-block
+      margin-right: 15px
+      color: #444653
+
+.team-item__name
+  color: #fa9253
+  font-size: 20px
+  font-weight: bold
+.team-item__position
+  text-transform: uppercase
+  font-size: 14px
+  position: relative
+  padding-bottom: 15px !important
+  &::before
+    content: ""
+    position: absolute
+    width: 30px
+    height: 2px
+    bottom: 0
+    left: 21px
+    background: #fa9253
+    +breakpoint(max-width 430px)
+      left: 50%
+      margin-left: -15px
+.team-item-img
+  float: left
+  width: 50%
+  +breakpoint(max-width 430px)
+    width: 100%
+    text-align: center
+  img
+    max-width: 100%
+
+
 
 
 
