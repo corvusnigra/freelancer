@@ -190,6 +190,49 @@ body textarea:required:valid
     width: 100%
 //	Owl Carousel - Video Plugin
 
+//Toggle Menu http://codepen.io/agragregra/pen/bEbbmZ
+.toggle-mnu 
+  width: 28px
+  height: 28px
+  margin-top: 14px
+  position: fixed
+  right: 15px
+  top: 0
+  z-index: 100
+
+  span:after, span:before 
+    content: ""
+    position: absolute
+    left: 0
+    top: 9px
+
+  span:after
+    top: 18px
+
+  span 
+    position: relative
+    display: block
+
+  span, span:after, span:before
+    width: 100%
+    height: 2px
+    background-color: #fff
+    transition: all 0.3s
+    backface-visibility: hidden
+    border-radius: 2px
+    &.bg-dark
+      background: #000
+
+  &.on span 
+    background-color: transparent
+
+  &.on span:before 
+    transform: rotate(45deg) translate(-1px, 0px)
+
+  &.on span:after 
+    transform: rotate(-45deg) translate(6px, -7px)
+
+
 
 //Custom Styles Here
 .about-descr
@@ -287,6 +330,207 @@ nav
 		opacity: 0
 	to
 		opacity: 1
+
+#mobile-menu
+  z-index: 101
+
+.skills
+  background-size: cover
+  background-position: top center
+  position: relative
+  color: #fff
+  padding-bottom: 0
+  h1
+    color: #fff
+  &::before
+    content: ""
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: #081528
+    opacity: 0.9
+
+.position-r
+  position: relative
+  z-index: 50
+.skills-menu
+  list-style-type: none
+  margin: 0
+  padding: 0
+  border-right: 2px solid rgba(255,255,255, 0.2)
+  +breakpoint(max-width 990px)
+    border-right: none
+    text-align: center
+  li
+    margin: 30px 0
+    vertical-align: middle
+    transition: .3s
+
+    +breakpoint(max-width 990px)
+      display: inline-block
+      margin-right: 20px
+      &:hover,&.active
+        border-right: none !important
+
+    &:hover,&.active
+      border-right: 2px solid #f3924d
+      .wrap-icon
+        background: #f3924d
+        color: #fff
+        border: 1px solid #f3924d
+    
+  .wrap-icon
+    width: 59px
+    height: 59px
+    padding: 15px
+    +breakpoint(max-width 664px)
+      display: block
+      margin: 10px 0
+    .fa
+      font-size: 25px
+
+.skills-container__item
+  width: 60px
+  transition: 1s
+  vertical-align: bottom
+  background: linear-gradient(to right, #4bd0e3 50%,#41c2d5 50%)
+  display: inline-block
+  position: relative
+  margin: auto 35px 0 0
+  transform: translateY(90%)
+  +breakpoint(max-width 615px)
+    margin-right: 5px
+  +breakpoint(max-width 430px)
+    margin-right: 0
+    width: 40px
+  &:nth-child(1)
+    background: linear-gradient(to right, #4bd0e3 50%,#41c2d5 50%)
+  &:nth-child(2)
+    background: linear-gradient(to right, #a8cfe0 50%,#96c6da 50%)
+  &:nth-child(3)
+    background: linear-gradient(to right, #fec786 50%,#ffba6c 50%)
+  &:nth-child(4)
+    background: linear-gradient(to right, #ffaf50 50%,#ffa439 50%)
+  &:nth-child(5)
+    background: linear-gradient(to right, #ffc327 50%,#ffbc0d 50%)
+  .item-txt
+    color: #000301
+    opacity: 0
+    transition: .4s
+    width: 90px
+    font-weight: bold
+    display: inline-block
+    white-space: nowrap
+    transform: rotate(-90deg)
+    position: absolute
+    bottom: 20%
+    left: 50%
+    margin-left: -44px
+
+.tab-content-box.active
+  .up-height
+    transform: translateY(0)
+    .item-txt
+      opacity: 1
+    .item-header
+      display: block
+    &:nth-child(1)
+      height: 100%
+    &:nth-child(2)
+      height: 100%
+    &:nth-child(3)
+      height: 90%
+    &:nth-child(4)
+      height: 80%
+    &:nth-child(5)
+      height: 70%
+.tab-row
+  padding-top: 5%
+
+
+.skills-container
+  height: 400px
+  padding: 30px 5% 0px 5%
+  text-align: center
+  overflow: hidden
+ 
+
+.item-header
+  text-align: center
+  display: none
+  height: 30px
+  background: rgba(0,0,0, .5)
+  position: relative
+  &::before
+    content: ""
+    position: absolute
+    +triangle(12px, rgba(0,0,0, .5), down)
+    bottom: -6px
+    left: 50%
+    margin-left: -6px
+
+.line
+  position: absolute
+  height: 1px
+  border-top: 1px dashed rgba(255,255,255, 0.2)
+  width: 100%
+  left: -10px
+.line-1
+  top: 8%
+.line-2
+  top: 30%
+.line-3
+  top: 50%
+.line-4
+  top: 70%
+
+.project-menu
+  list-style-type: none
+  margin: 0
+  padding: 0
+  text-align: center
+  background-image: url(../img/squairy_light.png)
+  li
+    display: inline-block
+    margin: 0 10px
+    padding: 20px 0
+    position: relative
+    cursor: pointer
+    &:hover,&.active
+      &::before
+        opacity: 1
+        bottom: 10px
+    &::before
+      content: ""
+      position: absolute
+      bottom: -5px
+      left: 0
+      height: 2px
+      width: 100%
+      opacity: 0
+      transition: .3s
+      background: #f18d42
+
+.tab-content-wrap
+  a
+    &:visited,&:focus
+      outline: none
+  .project-item
+    padding: 0
+    height: 200px
+.project-img
+  height: 100%
+  width: 100%
+  background-size: cover !important
+.mix
+  display: none
+
+
+
+
+    
 
 
 
