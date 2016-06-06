@@ -27,6 +27,22 @@
 	});
 
 
+	$(".sf-menu").superfish({
+		delay: 200,
+		speed: "fast",
+		cssArrows: false
+	})
+	.after("<div id='mobile-menu'>").clone().appendTo("#mobile-menu");
+	$("#mobile-menu").find("*").attr("style", "");
+	$("#mobile-menu").children("ul").removeClass("sf-menu")
+	.parent().mmenu({
+		extensions : [ 'widescreen', 'theme-white', 'effect-menu-slide', 'pagedim-black' ],
+		navbar: {
+			title: "Меню"
+		}
+	});
+
+
 	$("img, a").on("dragstart", function(event) { event.preventDefault(); });
 
   // header carosel
@@ -84,8 +100,6 @@
 	$(document).on('ready', function () {
 		headerCarousel();
 		pageScroll();
-		 $(".mmenu").mmenu();
-
 	});
 	// window load
 	$(window).on('load', function () {
