@@ -236,18 +236,22 @@ body textarea:required:valid
 
 //Custom Styles Here
 .about-descr
-	padding-left: 80px
-	padding-top: 10px
+  padding-left: 80px
+  padding-top: 10px
+  +breakpoint(max-width 400px)
+    padding-left: 0
 
 .about-btn
-	padding-left: 80px
-	padding-top: 30px
-	.button
-		border-color: #cccccc
-		color: #282d4a
-	& .button:hover
-		background: #454851
-		color: #fff !important
+  padding-left: 80px
+  padding-top: 30px
+  +breakpoint(max-width 400px)
+    padding-left: 0
+  .button
+    border-color: #cccccc
+    color: #282d4a
+    & .button:hover
+      background: #454851
+      color: #fff !important
 
 .about-item
 	ul
@@ -526,6 +530,33 @@ nav
   background-size: cover !important
 .mix
   display: none
+
+.work-item
+  position: relative
+  .col-md-10
+    padding: 0 40px
+  .col-md-2
+    text-align: center
+  .work-arrow
+    content: ""
+    position: absolute
+    width: 33px
+    height: 145px
+    background-image: url(../img/icon_arrow.png)
+    right: 0px
+    bottom: -40px
+  img
+    max-width: 100%
+    margin-top: 30px
+    opacity: 0
+
+.text-right
+  text-align: right
+  .work-arrow
+    background-image: url(../img/icon_arrow_right.png) !important
+    left: 0px
+
+
 
 
 

@@ -89,11 +89,29 @@
   .addTo(controller);
 
   var imgscene2 = new ScrollMagic.Scene({
-    triggerElement: "#skills",
-    triggerHook: "onLeave",
-    offset: "10%",
+    triggerElement: "#skills"
   }).setClassToggle(".skills-container__item", "up-height") 
   .addTo(controller);
+
+
+
+  
+  // .add(TweenMax.to("#work-1 img", .5, {className:"+=animated bounceIn"}))
+  // .add(TweenMax.to("#work-1 .work-arrow", 0.5, {height: "145px", ease: Linear.easeNone}))
+  // .add(TweenMax.to("#work-2 img", .5, {className:"+=animated bounceIn"}))
+  // .add(TweenMax.to("#work-2 .work-arrow", 0.5, {height: "145px", ease: Linear.easeNone}))
+  // .add(TweenMax.to("#work-3 img", .5, {className:"+=animated bounceIn"}))
+  // .add(TweenMax.to("#work-3 .work-arrow", 0.5, {height: "145px", ease: Linear.easeNone}))
+  // .add(TweenMax.to("#work-4 img", .5, {className:"+=animated bounceIn"}))
+  // .add(TweenMax.to("#work-4 .work-arrow", 0.5, {height: "145px", ease: Linear.easeNone}))
+  // .add(TweenMax.to("#work-5 img", .5, {className:"+=animated bounceIn"}))
+  // .add(TweenMax.to("#work-5 .work-arrow", 3.5, {height: "145px", ease: Linear.easeNone}))
+
+
+  //                   // build scene
+  // var scene = new  ScrollMagic.Scene({triggerElement: "#work", offset: "200px"})
+  // .setTween(tween)
+  // .addTo(controller);
 
 
 
@@ -104,11 +122,21 @@
 
   $(".about-item").animated("fadeInRight");
   $(".services-item").animated("fadeInLeft");
+  $(".work-item img").animated("bounceIn");
+  $(".work-item .work-arrow").animated("slideInDown");
 
   function  mobileMenu() {
 
-    $('#mobile-menu').mmenu({
-      extensions : [  'theme-white', 'effect-menu-slide', 'pagedim-black' ],
+    $(".sf-menu").superfish({
+      delay: 200,
+      speed: "fast",
+      cssArrows: false
+    })
+    .after("<div id='mobile-menu'>").clone().appendTo("#mobile-menu");
+    $("#mobile-menu").find("*").attr("style", "");
+    $("#mobile-menu").children("ul").removeClass("sf-menu")
+    .parent().mmenu({
+      extensions : [ 'widescreen', 'theme-white', 'effect-menu-slide', 'pagedim-black' ],
       navbar: {
         title: "Меню"
       }
@@ -118,12 +146,12 @@
       $(this).addClass("on");
     });
 
-  var api = $("#mobile-menu").data("mmenu");
-  api.bind("closed", function () {
-    $(".toggle-mnu").removeClass("on");
-  });
+    var api = $("#mobile-menu").data("mmenu");
+    api.bind("closed", function () {
+      $(".toggle-mnu").removeClass("on");
+    });
 
-};
+  };
 
 function featureListTab () {
     var tabContent = $('.tab-row');
