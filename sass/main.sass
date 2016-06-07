@@ -676,6 +676,143 @@ nav
     &.active
       background: #d9d9d9
 
+.blog
+  background: url(../img/squairy_light.png) repeat
+
+.blog-carousel__item
+  background: #fff
+  position: relative
+  margin-top: 50px
+  ul
+    list-style-type: none
+    margin: 0
+    padding: 0
+.blog-item__round-img
+  background-size: 60% !important
+  background-position: center !important
+  position: absolute
+  border: 3px solid #fff
+  width: 85px
+  height: 85px
+  border-radius: 50%
+  top: -40px
+  right: 20px
+  z-index: 100
+
+.blog-item__img
+  height: 200px
+  background-size: cover !important
+.blog-item__header
+  font-weight: bold
+  padding: 20px 20px
+  position: relative
+  &::before
+    content: ""
+    position: absolute
+    height: 2px
+    width: 30px
+    background: #f78f46
+    bottom: 0
+    left: 20px
+.blog-item__p
+  padding: 0 20px 10px
+
+.blog-item__date
+  border-top: 1px solid #eff1f0
+  padding: 10px 20px
+  span
+    display: inline-block
+    margin: 0 15px
+  .fa
+    color: #a3b5cd
+
+.blog-carousel
+  .owl-prev,.owl-next
+    position: static
+    display: inline-block
+    margin-right: 20px
+    border-color: #c7c9c8
+    color: #354658
+    &:hover
+      background: #354658
+      color: #fff
+  .owl-nav
+    text-align: center
+    padding: 40px 0
+
+.contact-container
+  margin-top: -360px
+  [class*="col-"]
+    background: #fff
+  .section-h1
+    text-transform: inherit
+    margin-left: 35px
+    margin-top: 40px
+    &::before
+      bottom: -10px
+.contact-form
+  padding: 40px 20px
+  .button
+    background: #1a1d24
+    border-radius: 0
+  ul
+    list-style-type: none
+    margin: 0
+    padding: 0
+    li
+      float: left
+      margin-bottom: 20px
+      padding: 0 10px
+      textarea
+        width: 100%
+        resize: vertical
+        text-indent: 20px
+        background: #f0f0f0
+        border: none
+        height: 107px
+        &:focus
+          outline: none
+      input
+        width: 100%
+        text-indent: 20px
+        background: #f0f0f0
+        border: none
+        height: 50px
+        &:focus
+          outline: none
+
+.half
+  width: 50%
+.full
+  width: 100%
+
+.conversation
+  .header-soc
+    margin-top: 0
+    ul
+      padding: 0
+      .wrap-icon
+        border: 1px solid #cfcfd1
+        .fa
+          color: #3f434e
+          margin: 0
+
+
+  ul
+    list-style-type: none
+    margin: 0
+    padding: 30px 40px
+    color: #47484c
+    a
+      color: #47484c
+      text-decoration: underline
+    .fa
+      margin-right: 20px
+
+.map
+  padding: 250px 0
+
+
 
 
 

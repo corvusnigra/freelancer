@@ -86,6 +86,36 @@
     }
   }
 
+   function blogCarousel () {
+    var blogCarousel = $('.blog-carousel');
+    if (blogCarousel.length) {
+      blogCarousel.owlCarousel({
+        dots: false,
+        loop: true,
+        nav: true,
+        items: 3,
+        margin: 30,
+        navText: [
+        '<i class="fa fa-long-arrow-left"></i>',
+        '<i class="fa fa-long-arrow-right"></i>'
+        ],
+        responsive:{
+          0:{
+            items:1
+          },
+
+          600:{
+            items:2
+          },
+          800:{
+            items:3
+          }
+        }
+
+      });
+    }
+  }
+
   // mPageScroll2id
 
   function pageScroll() {
@@ -211,15 +241,35 @@ function featureListTab () {
     });
   }
 
+  //map
+  function gMaps() {
+     map = new GMaps({
+        el: '#map',
+        lat: -12.043333,
+        lng: -77.028333,
+        zoomControl : false,
+        // zoomControlOpt: {
+        //     style : 'SMALL',
+        //     position: 'TOP_LEFT'
+        // },
+        panControl : false,
+        streetViewControl : false,
+        mapTypeControl: false,
+        overviewMapControl: false
+      });
+  }
+
 	// doc ready
 	$(document).on('ready', function () {
 		headerCarousel();
     customersCarousel();
+    blogCarousel();
 		pageScroll();
     mobileMenu();
     featureListTab();
     upcomingEventFilter();
-    popupProject()
+    popupProject();
+    gMaps()
 	});
 	// window load
 	$(window).on('load', function () {
