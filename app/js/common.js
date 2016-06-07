@@ -45,7 +45,7 @@
 
 	$("img, a").on("dragstart", function(event) { event.preventDefault(); });
 
-  // header carosel
+  // header carousel
   function headerCarousel () {
   	var headerCarousel = $('.header-carousel');
   	if (headerCarousel.length) {
@@ -62,6 +62,28 @@
   		
   		});
   	}
+  }
+
+  function customersCarousel () {
+    var customersCarousel = $('.customers-carousel');
+    if (customersCarousel.length) {
+      customersCarousel.owlCarousel({
+        dots: true,
+        loop: true,
+        nav: false,
+        items: 2,
+        margin: 30,
+        responsive:{
+          0:{
+            items:1
+          },
+
+          600:{
+            items:2
+          }
+        }
+      });
+    }
   }
 
   // mPageScroll2id
@@ -192,6 +214,7 @@ function featureListTab () {
 	// doc ready
 	$(document).on('ready', function () {
 		headerCarousel();
+    customersCarousel();
 		pageScroll();
     mobileMenu();
     featureListTab();

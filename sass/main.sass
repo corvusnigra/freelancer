@@ -634,6 +634,51 @@ nav
   img
     max-width: 100%
 
+.customers-carousel__item
+  background: url(../img/squairy_light.png) repeat
+  padding: 20px 60px
+  position: relative
+  margin-bottom: 30px
+  text-align: center
+  &::before
+    content: ""
+    position: absolute
+    bottom: -22px
+    right: 30px
+    width: 26px
+    height: 22px
+    background: url(../img/img_triangle.png)
+
+  ul
+    list-style-type: none
+    margin: 0
+    padding: 0
+.customers-img
+  font-size: 40px
+  color: #f78f46
+.customers-name
+  font-weight: bold
+  position: relative
+  padding-top: 30px
+  &::before
+    content: ""
+    position: absolute
+    top: 10px
+    left: 50%
+    margin-left: -15px
+    height: 2px
+    width: 30px
+    background: #f78f46
+
+.customers-carousel
+  .owl-dot
+    border: 1px solid #d9d9d9
+    &.active
+      background: #d9d9d9
+
+
+
+
 
 
 
