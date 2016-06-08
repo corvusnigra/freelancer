@@ -812,6 +812,126 @@ nav
 .map
   padding: 250px 0
 
+.supfooter
+  .logo
+    margin-top: 30px
+  p
+    border-left: 2px solid #fff
+    padding-left: 30px
+  color: #fff
+  background: url(../img/bg_subfooter.jpg)
+  background-size: cover
+  background-attachment: fixed
+  background-position: top center
+  position: relative
+  &::before
+    content: ""
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: #f78f46
+    opacity: .8
+
+footer
+  padding: 50px 0
+  background: #1a1d24
+  color: #FFF
+  .instagram
+    li
+      float: left
+      margin-right: 10px
+      margin-bottom: 10px
+      width: 28%
+      img
+        max-width: 100%
+  .tags
+    li
+      float: left
+      text-transform: uppercase
+      padding: 5px 10px
+      border: 1px solid #fff
+      margin: 5px
+  .widget
+    margin-bottom: 20px
+  .news
+    input
+      width: 100%
+      border: none
+      text-indent: 20px
+      height: 40px
+      margin: 0px 0 10px 0
+      &:focus
+        outline: none
+        color: #000
+    .button
+      margin-top: 20px
+      background: #f78f46
+      border-radius: 0
+      border-color: #f78f46
+  .fa
+    margin-right: 15px
+  a
+    color: #f78f46
+  ul
+    list-style-type: none
+    margin: 0
+    padding: 0
+  h2
+    font-size: 20px
+    position: relative
+    color: #fff
+    margin-bottom: 40px
+    &::before
+      content: ""
+      position: absolute
+      bottom: -10px
+      left: 0
+      height: 2px
+      width: 30px
+      background: #f78f46
+footer
+  .project-popup
+    display: inline-block
+    position: relative
+    transition: .3s
+    &:focus
+      outline: none
+    &::before
+      position: absolute
+      content: "\f002"
+      padding-top: 10px
+      font-family: FontAwesome
+      top: 1px
+      left: 0
+      width: 100%
+      height: 100%
+      background: rgba(0,0,0, 0)
+      text-align: center
+      color: transparent
+      transition: .3s
+    &:hover 
+      &::before
+        background: rgba(0,0,0, .8)
+        color: #fff
+
+.subfooter
+  background: url(../img/squairy_light.png) repeat
+  padding: 20px 0
+  ul
+    list-style-type: none
+    margin: 0
+    padding: 0
+    li
+      display: inline-block
+      margin-right: 15px
+      a
+        color: #474955
+
+
+
+
 
 
 
